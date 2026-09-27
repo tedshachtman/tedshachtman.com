@@ -138,8 +138,8 @@
   .brand { font-family: var(--display); font-weight: 750; font-size: 1.15rem; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
   .brand span { color: var(--muted); font-weight: 500; }
   .nav { display: flex; align-items: center; gap: 22px; font-family: var(--display); font-size: 0.95rem; }
-  .nav a { color: var(--ink-soft); text-decoration: none; }
-  .nav a:hover { color: var(--teal); }
+  .nav a:not(.btn) { color: var(--ink-soft); text-decoration: none; }
+  .nav a:not(.btn):hover { color: var(--teal); }
   .nav .nav-link, .nav .nav-cta { display: none; }
   @media (min-width: 720px) { .nav .nav-cta { display: inline-flex; } }
   @media (min-width: 820px) { .nav .nav-link { display: inline; } }
