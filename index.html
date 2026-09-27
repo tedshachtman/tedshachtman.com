@@ -9,6 +9,8 @@
 <link rel="canonical" href="https://tedshachtman.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tedshachtman.com/">
+<meta property="og:image" content="https://tedshachtman.com/ted-square.jpg">
+<meta name="twitter:card" content="summary">
 <meta property="og:title" content="Ted Shachtman Tutoring">
 <meta property="og:description" content="SAT, PSAT and math tutoring in Montclair, NJ from a certified teacher who scored 800 on SAT Math.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2312506B'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23FFE066'%3E800%3C/text%3E%3C/svg%3E">
@@ -18,6 +20,7 @@
   "@type": "ProfessionalService",
   "name": "Ted Shachtman Tutoring",
   "url": "https://tedshachtman.com/",
+  "image": "https://tedshachtman.com/ted-square.jpg",
   "description": "SAT, PSAT, math, reading and coding tutoring in Montclair, NJ.",
   "telephone": "+1-973-830-6517",
   "email": "teddyshachtman@gmail.com",
@@ -244,16 +247,9 @@
   /* About */
   .about { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; }
   @media (min-width: 820px) { .about { grid-template-columns: 13rem minmax(0, 1fr); gap: 48px; } }
-  .portrait {
-    width: 100%; max-width: 13rem; aspect-ratio: 4 / 5; border-radius: 10px;
-    background-color: var(--panel);
-    background-image:
-      linear-gradient(var(--grid-strong) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid-strong) 1px, transparent 1px);
-    background-size: 20px 20px;
-    display: grid; place-items: center; border: 1px solid var(--grid-strong);
-  }
-  .portrait span { font-family: var(--display); font-weight: 780; font-size: 3.2rem; color: var(--teal); letter-spacing: -0.03em; background: var(--panel); padding: 2px 10px; border-radius: 6px; }
+  .portrait { margin: 0; width: 100%; max-width: 13rem; }
+  .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; border: 1px solid var(--grid-strong); background: var(--panel); }
+  .avatar { float: left; width: 64px; height: 64px; border-radius: 50%; object-fit: cover; margin: 4px 14px 2px 0; shape-outside: circle(50%); border: 3px solid var(--hl); }
   .about-text { display: grid; gap: 14px; max-width: 40rem; }
   .spotlight { display: grid; gap: 6px; padding: 18px 20px; border-radius: 10px; background: var(--panel); border-left: 4px solid var(--cta-bg); }
   .spotlight h3 { font-size: 1.2rem; }
@@ -336,7 +332,7 @@
       <div>
         <p class="eyebrow">Math &amp; SAT tutoring · Montclair, NJ</p>
         <h1 id="hero-title">SAT and math tutoring from a certified teacher who scored <span class="hl">800</span> in math.</h1>
-        <p class="lead">I’m Ted Shachtman, a Montclair native, Vanderbilt-trained teacher and former math department head. I work one-on-one with students from kindergarten through 12th grade, at your home, at a local library, or online.</p>
+        <p class="lead"><img class="avatar" src="ted-avatar.jpg" alt="Ted Shachtman" width="64" height="64">I’m Ted Shachtman, a Montclair native, Vanderbilt-trained teacher and former math department head. I work one-on-one with students from kindergarten through 12th grade, at your home, at a local library, or online.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#contact">Book a free 20-minute call</a>
           <a class="btn btn-quiet" href="#rates">See rates</a>
@@ -447,7 +443,12 @@
 
   <section class="section" id="about" aria-labelledby="about-title">
     <div class="wrap about">
-      <div class="portrait" role="img" aria-label="Photo placeholder"><span>TS</span></div>
+      <figure class="portrait">
+        <picture>
+          <source srcset="ted.webp" type="image/webp">
+          <img src="ted.jpg" alt="Ted Shachtman" width="640" height="800" loading="lazy" decoding="async">
+        </picture>
+      </figure>
       <div class="about-text">
         <p class="eyebrow">About me</p>
         <h2 id="about-title">A Montclair kid who became a teacher.</h2>
